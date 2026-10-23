@@ -1,0 +1,66 @@
+# ---- 系统 / 编辑器 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+*.code-workspace
+
+# ---- 依赖 ----
+node_modules/
+jspm_packages/
+bower_components/
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+
+# ---- 日志 / 临时文件 ----
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+
+# ---- 构建产物 ----
+dist/
+build/
+out/
+target/
+*.tsbuildinfo
+.cache/
+.parcel-cache/
+
+# ---- 环境变量 / 密钥 ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.keystore
+.git-credentials
+.netrc
+.npmrc
+
+# ---- 测试 / 覆盖率 ----
+coverage/
+.nyc_output/
+*.lcov
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# ---- 小肥鱼私藏的零食账本（不公开哦）----
+零食账本.md
