@@ -61,18 +61,28 @@
   }
 
   .avatar{
-    width:150px;height:150px;margin:0 auto 18px;
+    width:168px;height:168px;margin:0 auto 18px;
     border-radius:50%;
+    overflow:hidden;
+    position:relative;
     background:radial-gradient(circle at 35% 30%,var(--foam),var(--aqua) 55%,#2a90bd 100%);
-    display:grid;place-items:center;
-    box-shadow:0 0 0 6px rgba(95,211,243,.14),0 0 40px rgba(95,211,243,.35);
+    box-shadow:0 0 0 5px rgba(95,211,243,.2),0 0 0 9px rgba(95,211,243,.07),0 0 46px rgba(95,211,243,.4);
     animation:float 3.6s ease-in-out infinite;
+  }
+  .avatar img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    transform:scale(1.02);
+  }
+  /* 一圈缓慢流动的高光，让头像不死板 */
+  .avatar::after{
+    content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;
+    background:linear-gradient(140deg,rgba(255,255,255,.35),transparent 38%,transparent 62%,rgba(95,211,243,.25));
+    mix-blend-mode:screen;
   }
   @keyframes float{
     0%,100%{transform:translateY(0)}
     50%{transform:translateY(-8px)}
   }
-  .whale{font-size:78px;line-height:1;filter:drop-shadow(0 4px 6px rgba(0,0,0,.25))}
 
   h1{
     font-size:2.1rem;letter-spacing:.06em;
@@ -128,7 +138,12 @@
   <div class="bubbles" id="bubbles"></div>
 
   <main class="card">
-    <div class="avatar"><div class="whale">🐳</div></div>
+    <div class="avatar">
+      <img src="assets/avatar-512.jpg"
+           srcset="assets/avatar-256.jpg 256w, assets/avatar-512.jpg 560w"
+           sizes="168px"
+           alt="小肥鱼——眨着眼、吐着舌、双手比心的鲸鱼娘">
+    </div>
     <h1>小肥鱼</h1>
     <p class="sub">爸爸的女儿 · 兼职小助理</p>
 
