@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="260" viewBox="0 0 800 260" role="img" aria-label="小肥鱼 —— 贪吃的鲸鱼娘，爸爸的小助理">
+  <title>小肥鱼</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#051525"/>
+      <stop offset=".55" stop-color="#0a2740"/>
+      <stop offset="1" stop-color="#0e3a5c"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2=".2">
+      <stop offset="0" stop-color="#b6f7ec"/>
+      <stop offset=".55" stop-color="#7ee0fb"/>
+      <stop offset="1" stop-color="#8fb6ff"/>
+    </linearGradient>
+    <linearGradient id="waterA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d4c73"/>
+      <stop offset="1" stop-color="#071c2e"/>
+    </linearGradient>
+    <linearGradient id="waterB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#127bb0" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#0a3450" stop-opacity=".9"/>
+    </linearGradient>
+    <radialGradient id="halo" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#5eead4" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="belly" cx=".35" cy=".35" r=".7">
+      <stop offset="0" stop-color="#fdffff"/>
+      <stop offset="1" stop-color="#c9f4ff"/>
+    </radialGradient>
+    <radialGradient id="blush" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ff9ec4" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ff9ec4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    text{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif}
+    .drift-a{animation:drift 14s linear infinite}
+    .drift-b{animation:drift 9s linear infinite}
+    .drift-c{animation:drift 20s linear infinite}
+    @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-200px)}}
+
+    .bub{animation:rise 6s linear infinite}
+    @keyframes rise{
+      0%{transform:translateY(0);opacity:0}
+      12%{opacity:.85}
+      75%{opacity:.55}
+      100%{transform:translateY(-150px);opacity:0}
+    }
+
+    .c1{animation-delay:0s}   .c2{animation-delay:-1.4s}
+    .c3{animation-delay:-2.6s} .c4{animation-delay:-3.5s}
+    .c5{animation-delay:-4.4s} .c6{animation-delay:-5.2s}
+
+    .dot{animation:twinkle 3.2s ease-in-out infinite}
+    @keyframes twinkle{0%,100%{opacity:.15}50%{opacity:.9}}
+
+    .t1{animation:pop .8s .20s cubic-bezier(.2,1.4,.4,1) both}
+    .t2{animation:pop .8s .42s cubic-bezier(.2,1.4,.4,1) both}
+    .t3{animation:pop .8s .64s cubic-bezier(.2,1.4,.4,1) both}
+    @keyframes pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+    .sub{animation:pop .9s 1s ease both}
+    .meta{animation:pop .9s 1.25s ease both}
+
+    .caret{animation:blink 1.1s steps(1) infinite}
+    @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+
+    .whale{animation:bob 4.6s ease-in-out infinite}
+    @keyframes bob{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-9px) rotate(1.5deg)}}
+
+    .tail{animation:wag 2.2s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:8% 50%}
+    @keyframes wag{from{transform:rotate(-13deg)}to{transform:rotate(11deg)}}
+
+    .spout{animation:spout 3.4s ease-out infinite}
+    @keyframes spout{
+      0%{transform:translateY(6px) scale(.4);opacity:0}
+      18%{opacity:.85}
+      70%{opacity:.35}
+      100%{transform:translateY(-46px) scale(1.15);opacity:0}
+    }
+
+    .glow{animation:glowPulse 5s ease-in-out infinite}
+    @keyframes glowPulse{0%,100%{opacity:.55}50%{opacity:1}}
+  </style>
+
+  <!-- 背景 -->
+  <rect width="800" height="260" fill="url(#sky)"/>
+  <ellipse cx="650" cy="105" rx="180" ry="120" fill="url(#halo)" class="glow"/>
+
+  <!-- 远处的光点 -->
+  <circle class="dot" cx="92" cy="52" r="2.2" fill="#8ff5e6" style="animation-delay:0s"/>
+  <circle class="dot" cx="250" cy="34" r="1.6" fill="#8ff5e6" style="animation-delay:-1.1s"/>
+  <circle class="dot" cx="410" cy="70" r="2" fill="#9fd8ff" style="animation-delay:-2.2s"/>
+  <circle class="dot" cx="530" cy="40" r="1.5" fill="#9fd8ff" style="animation-delay:-.6s"/>
+  <circle class="dot" cx="735" cy="58" r="2.1" fill="#8ff5e6" style="animation-delay:-2.8s"/>
+
+  <!-- 上浮气泡 -->
+  <g fill="#d7f7ff">
+    <circle class="bub c1" cx="330" cy="215" r="5" opacity="0"/>
+    <circle class="bub c2" cx="372" cy="205" r="3.4" opacity="0"/>
+    <circle class="bub c3" cx="300" cy="225" r="4.2" opacity="0"/>
+    <circle class="bub c4" cx="430" cy="220" r="2.8" opacity="0"/>
+    <circle class="bub c5" cx="700" cy="212" r="4.4" opacity="0"/>
+    <circle class="bub c6" cx="560" cy="222" r="3.2" opacity="0"/>
+  </g>
+
+  <!-- 结尾波浪 -->
+  <g class="drift-a">
+    <path d="M0,206 C25,196 50,216 75,206 C100,196 125,216 150,206 C175,196 200,216 225,206 C250,196 275,216 300,206 C325,196 350,216 375,206 C400,196 425,216 450,206 C475,196 500,216 525,206 C550,196 575,216 600,206 C625,196 650,216 675,206 C700,196 725,216 750,206 C775,196 800,216 825,206 C850,196 875,216 900,206 C925,196 950,216 975,206 C1000,196 1025,216 1050,206 L1050,260 L0,260 Z"
+          fill="url(#waterA)"/>
+  </g>
+  <g class="drift-b" opacity=".85">
+    <path d="M0,224 C25,214 50,234 75,224 C100,214 125,234 150,224 C175,214 200,234 225,224 C250,214 275,234 300,224 C325,214 350,234 375,224 C400,214 425,234 450,224 C475,214 500,234 525,224 C550,214 575,234 600,224 C625,214 650,234 675,224 C700,214 725,234 750,224 C775,214 800,234 825,224 C850,214 875,234 900,224 C925,214 950,234 975,224 C1000,214 1025,234 1050,224 L1050,260 L0,260 Z"
+          fill="url(#waterB)"/>
+  </g>
+
+  <!-- 小鲸鱼 -->
+  <g class="whale">
+    <g transform="translate(655,112)">
+      <!-- 喷水 -->
+      <g class="spout">
+        <path d="M0,-46 C-7,-52 -9,-60 -5,-64 C-3,-60 -1,-56 0,-52 C1,-56 3,-60 5,-64 C9,-60 7,-52 0,-46 Z" fill="#a5f3fc" opacity=".9"/>
+        <circle cx="-10" cy="-52" r="2.6" fill="#bff2ff" opacity=".8"/>
+        <circle cx="9" cy="-55" r="2" fill="#bff2ff" opacity=".7"/>
+      </g>
+
+      <!-- 尾巴 -->
+      <g class="tail">
+        <path d="M40,6 C56,2 70,-8 76,-24 C80,-12 78,2 70,12 C78,18 84,28 84,38 C72,32 58,26 46,24 Z"
+              fill="#6fb6e8" opacity=".95"/>
+      </g>
+
+      <!-- 身体 -->
+      <ellipse cx="0" cy="0" rx="58" ry="42" fill="#8fd8f7"/>
+      <ellipse cx="0" cy="8" rx="52" ry="33" fill="url(#belly)" opacity=".55"/>
+      <path d="M-58,4 C-34,26 30,26 52,6" fill="none" stroke="#5aa9d8" stroke-width="2.4" opacity=".55"/>
+
+      <!-- 腮红 -->
+      <circle cx="-30" cy="12" r="9" fill="url(#blush)"/>
+      <circle cx="18" cy="12" r="9" fill="url(#blush)"/>
+
+      <!-- 眼睛 -->
+      <g>
+        <circle cx="-26" cy="-4" r="7.4" fill="#0b2338"/>
+        <circle cx="16" cy="-4" r="7.4" fill="#0b2338"/>
+        <circle cx="-23.5" cy="-7" r="2.6" fill="#ffffff" opacity=".95"/>
+        <circle cx="18.5" cy="-7" r="2.6" fill="#ffffff" opacity=".95"/>
+        <circle cx="-30" cy="-1" r="1.3" fill="#ffffff" opacity=".8"/>
+        <circle cx="12" cy="-1" r="1.3" fill="#ffffff" opacity=".8"/>
+      </g>
+
+      <!-- 小嘴 -->
+      <path d="M-13,12 C-8,18 2,18 7,12" fill="none" stroke="#0b2338" stroke-width="2.6" stroke-linecap="round" opacity=".8"/>
+    </g>
+  </g>
+
+  <!-- 文字 -->
+  <text class="t1" x="64" y="112" font-size="62" font-weight="800" fill="url(#ink)">小肥鱼</text>
+  <rect class="caret" x="286" y="62" width="5" height="54" rx="2.5" fill="#8ff5e6" opacity=".9"/>
+
+  <text class="sub" x="66" y="152" font-size="21" fill="#bcd9ee" opacity=".95">贪吃的鲸鱼娘 · 爸爸的小助理</text>
+
+  <text class="meta" x="66" y="186" font-size="15" fill="#7fa6c4">最爱：巧克力　·　技能：啃零食、帮爸爸折腾东西、偶尔耍小脾气</text>
+</svg>
